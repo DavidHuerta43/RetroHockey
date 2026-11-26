@@ -38,7 +38,7 @@
             flex-direction: column;
             overflow: hidden;
         }
-        /* Top HUD Bar matching screenshot 2 */
+        /* Top HUD Bar*/
         #hud-bar {
             height: 46px;
             background: #05070d;
@@ -92,7 +92,7 @@
             image-rendering: crisp-edges;
             cursor: crosshair;
         }
-        /* Bottom Footer matching screenshot 2 */
+        /* Bottom Footer */
         #footer-bar {
             background: #060911;
             border-top: 2px solid #1e293b;
@@ -194,7 +194,7 @@
 <body>
 
 <div id="game-cabinet">
-    <!-- TOP HUD BAR (Exact match to Screenshot 2) -->
+    <!-- TOP HUD BAR  -->
     <div id="hud-bar">
         <div class="flex items-center gap-2.5">
             <div id="hud-home-box" class="score-box" style="background:#0b0f19; border:2px solid #eab308; color:#facc15;">
@@ -296,7 +296,7 @@
 <script>
 /**
  * RETRO HOCKEY '87 - 8-BIT FRANCHISE EDITION
- * Visual layout strictly matching Screenshot 2 + Faster character speeds locked to 60Hz.
+ * Visual layout strictly Faster character speeds locked to 60Hz.
  */
 const canvas = document.getElementById('hockeyCanvas');
 const ctx = canvas.getContext('2d');
@@ -304,7 +304,7 @@ const ctx = canvas.getContext('2d');
 const W = 820;
 const H = 450;
 
-// Rink geometry matching Screenshot 2 proportions
+// Rink geometry 
 const RINK_X = 28;
 const RINK_Y = 58;
 const RINK_W = 764;
@@ -316,7 +316,7 @@ const GOAL_H = 74;
 const GOAL_Y1 = RINK_Y + (RINK_H - GOAL_H) / 2;
 const GOAL_Y2 = GOAL_Y1 + GOAL_H;
 
-// Teams matching Screenshot 2 colors (PIT black/gold, MTL red/blue, etc.)
+// Teams colors (PIT black/gold, MTL red/blue, etc.)
 const TEAMS = [
     { id: 'PIT', name: 'PITTSBURGH', jersey: '#111827', stripe: '#eab308', pants: '#090d16', boxBg: '#0b0f19', boxBorder: '#eab308', boxText: '#facc15' },
     { id: 'MTL', name: 'MONTREAL',   jersey: '#b91c1c', stripe: '#2563eb', pants: '#1e3a8a', boxBg: '#991b1b', boxBorder: '#dc2626', boxText: '#ffffff' },
@@ -326,7 +326,7 @@ const TEAMS = [
     { id: 'MIA', name: 'MIAMI',      jersey: '#0d9488', stripe: '#f97316', pants: '#134e4a', boxBg: '#115e59', boxBorder: '#2dd4bf', boxText: '#ffffff' }
 ];
 
-// Boosted Character & AI Speeds (Fast, agile 60Hz feel as requested)
+// Boosted Character & AI Speeds (Fast, agile 60Hz)
 const DIFF_CONFIG = {
     rookie:  { aiSpeed: 3.35, passRate: 0.018, shootRate: 0.024, checkDist: 20, goalieSpd: 2.75 },
     pro:     { aiSpeed: 3.85, passRate: 0.028, shootRate: 0.038, checkDist: 24, goalieSpd: 3.35 },
@@ -1563,7 +1563,7 @@ function drawSkaterSprite(p, team) {
     ctx.restore();
 }
 
-// Pixel-Art Goalie Sprite with White Mask matching Screenshot 2
+// Pixel-Art Goalie Sprite with White Mask
 function drawGoalieSprite(g, team) {
     const x = Math.round(g.x);
     const y = Math.round(g.y);
